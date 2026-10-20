@@ -1,0 +1,24 @@
+EXPERIMENT READOUTS (synthetic data)
+
+1. LANDING PAGE
+   Sizing: to detect a 10% relative lift on a 4.0% base with 80% power -> 39,475 visitors per arm. Ran 40,000 per arm.
+   Applications: 4.16% -> 4.59%, lift 10.4% (95% CI 3.6% to 17.2%), p = 0.0028
+   Guardrail, approval rate: 61.4% -> 60.9%, -0.4 pts (95% CI -3.7 pts to +2.8 pts); agreed limit -5.0 pts -> within limit
+   Approved applications per 1,000 visitors: 25.5 -> 28.0
+
+2. EMAIL SUBJECT LINES (three new lines vs control)
+   Rate-led       1.85% -> 2.21%  lift  19.1%  p = 0.0300  Holm-adjusted p = 0.0600
+   Deadline-led   1.85% -> 2.36%  lift  27.3%  p = 0.0022  Holm-adjusted p = 0.0067
+   Social proof   1.85% -> 2.02%  lift   9.0%  p = 0.2949  Holm-adjusted p = 0.2949
+   Winners if each is tested alone: Rate-led, Deadline-led
+   Winners after correcting for three comparisons: Deadline-led
+
+3. RETURNING-CUSTOMER JOURNEY (800 customers per arm)
+   Raw:   -0.34 days (95% CI -0.74 to +0.06), p = 0.097
+   CUPED: -0.43 days (95% CI -0.64 to -0.22), p = 0.00008
+   Last year's days-to-complete removed 71% of the noise (theta = 0.85); the interval is 47% narrower, worth about 2,818 customers per arm without CUPED.
+
+4. PEEKING (4,000 A/A tests, 28 days, no real difference)
+   Check once at the end:                 4.8% false wins
+   Check every day, stop at first p<0.05:  27.4% false wins
+   Planned weekly looks, O'Brien-Fleming:  5.0% false wins (z thresholds 4.05, 2.86, 2.34, 2.02)
